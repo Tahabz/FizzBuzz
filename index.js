@@ -10,6 +10,8 @@ app.use(express.json());
 
 app.use("/", fizzBuzzRouter);
 
+app.get("/", (req, res) => res.end("hello world"));
+
 app.listen(process.env.PORT, () => {
   console.log(`Server up and running on port ${process.env.PORT}!`);
 });
